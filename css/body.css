@@ -1,0 +1,146 @@
+div,a,p,ul,li,ol,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    list-style: none !important;
+}
+.my_small{
+    font-size: 14px;
+}
+body{
+    background: #F0F2F5;
+}
+#bodyer{
+    width:1180px;
+    margin: 30px auto;
+}
+/*轮播图*/
+#banner{
+    height:350px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.banner_b{
+    margin-bottom: 30px;
+}
+/*4张小图中的第一张*/
+.banner_b>img:first-child{
+    width:280px;
+    height:200px;
+}
+/*4张小图下的首页推荐*/
+.home_page{
+    margin: 20px 0 30px;
+}
+.home_page a{
+    display: inline-block;
+    color:#666;
+    line-height: 35px;
+    height:35px;
+}
+/*首页推荐*/
+.home_page_l>li:first-child a{
+    width:100px;
+    padding:0 20px;
+    border: 1px solid #007bff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color:#007bff;
+    background: transparent;
+    margin-right: 20px;
+}
+/*上传作品*/
+.home_page_r{
+    width:100px;
+    padding:0 20px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background: #007bff;
+    color:white !important;
+}
+/*分页*/
+.paging li{
+    margin-right: 10px;
+}
+/*汇漫师模糊背景*/
+.bg_tou{
+    overflow: hidden;
+    border-radius: 10px;
+}
+/*模糊背景图片*/
+.bg_tou img{
+    width:280px;
+    height:280px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    filter:blur(10px);
+    position: relative;
+    bottom:70px;
+}
+/*头像的a标签*/
+.author{
+    width:93px !important;
+    height:93px;
+    position: absolute;
+    top:80px;
+    left:97px;
+    display: block;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+/*头像*/
+.author_img{
+    width:86px !important;
+    height:86px !important;
+    border-radius: 50% !important;
+}
+/*头像下方白色div*/
+.bg_border{
+    width:278px;
+    height:190px;
+    background:white;
+    position: relative;
+    bottom:150px;
+    text-align: center;
+}
+.bg_border>p{
+    position: relative;
+    top:40px;
+    color:#9f9f9f;
+}
+.bg_border p a{
+    font-size: 18px;
+    width:100px;
+    color:#000;
+    margin: 0 auto;
+}
+/*白色div中的小图片*/
+.bg_border_img{
+    width:70px;
+    height:53px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.bg_border_ul>li{
+    width:70px;
+    height:53px;
+    position: relative;
+    top:60px;
+}
+/*友情链接*/
+.youqinglianjie{
+    background: #fff;
+    width:1180px;
+    height:56px;
+    line-height: 26px;
+    padding: 15px 17px;
+    margin-top: 40px;
+}
+.youqinglianjie>a{
+    font-size: 12px;
+    color:#9f9f9f;
+    display: inline-block;
+    margin-left: 20px;
+}

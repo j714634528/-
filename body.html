@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>模板</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pic.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--顶部导航栏-->
+    <header class="w-100 d-flex justify-content-between">
+    <!--左半边内容-->
+    <div id="head_l" class="d-flex justify-content-around w-50">
+        <!--logo图标-->
+        <div class="ml-5">
+            <a href="body.html"><img src="img/logo.png" alt="汇漫logo"></a>
+        </div>
+        <!--导航栏内容-->
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="body.html" class="nav-link active text-dark" data-target="tab">首页</a></li>
+            <li class="nav-item menu_b1"><a href="discover.html" class="nav-link" data-target="tab">发现</a>
+                <ul class="menu_b-1">
+                    <li><a href="#">插画作品</a></li>
+                    <li><a href="#">漫画作品</a></li>
+                    <li><a href="#">动画作品</a></li>
+                </ul>
+            </li>
+            <li class="nav-item menu_b1"><a href="xuexi.html" class="nav-link" data-target="tab">学习</a>
+                <ul class="menu_b-1">
+                    <li><a href="xuexi.html">文章</a></li>
+                    <li><a href="#">专访</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="linggan.html" class="nav-link" data-target="tab">灵感</a></li>
+            <li class="nav-item"><a href="huimanshi.html" class="nav-link" data-target="tab">汇漫师</a></li>
+            <li class="nav-item menu_b1"><a href="#" class="nav-link" data-target="tab">活动</a>
+                <ul class="menu_b-1">
+                    <li><a href="#">线上活动</a></li>
+                    <li><a href="#">专题策划</a></li>
+                    <li><a href="#">设计大赛</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--右半边内容-->
+    <div id="head_r" class="w-50 d-flex">
+        <!--搜索框-->
+        <div class="clearfix headsearch bg-white d-flex">
+            <!--搜索框的左半边-->
+            <div class="my_hsmall">
+                <div class="menu_b2">
+                    作品
+                    <img src="img/header_normal.png" class="mb-1">
+                    <!--先隐藏下拉菜单,学完jq再写-->
+                    <ul class="menu_b-2">
+                        <li><a href="#">作品</a></li>
+                        <li><a href="xuexi.html">文章</a></li>
+                        <li><a href="#">素材</a></li>
+                        <li><a href="#">汇漫师</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--搜索框右半边-->
+            <input type="search" class="my_search form-control-plaintext" href="img/" placeholder="搜索">
+            <a href="#" class="search_img"><img src="img/search.png" alt="搜索"></a>
+        </div>
+        <a href="login.html"><img src="img/dl.png" alt="登录">登录</a>
+        <a href="register.html" class="head_r_registe"><img src="img/zc.png" alt="注册">注册</a>
+    </div>
+</header>
+    <!--主体内容-->
+    <div id="bodyer">
+        <!--轮播图,学完jquery再做-->
+        <div id="banner">
+            <img src="img/5b8359ebc78e9.jpg">
+            <img src="img/5b836f88c0ebd.gif">
+            <img src="img/5b5fcaf53791e.jpg">
+            <img src="img/5b836ac78e2a8.jpg">
+        </div>
+        <!--轮播图下4张小图-->
+        <div class="d-flex justify-content-between banner_b">
+            <img src="img/1.jpg">
+            <img src="img/2.jpg">
+            <img src="img/3.jpg">
+            <img src="img/4.jpg">
+        </div>
+        <!--首页推荐栏目-->
+        <div class="home_page d-flex justify-content-between">
+            <ul class="home_page_l d-flex">
+                <li>
+                    <a href="#" class="my_small">首页推荐</a>
+                </li>
+                <li>
+                    <a href="#" class="my_small ml-4">最新作品</a>
+                </li>
+            </ul>
+            <a href="#" class="my_small home_page_r">上传作品</a>
+        </div>
+        <!--首页推荐下方图片展示包括分页-->
+        <div>
+            <!--图片展示-->
+            <div class="d-flex justify-content-between row pic">
+                <!--第一张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/1.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/100"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">小插画1</a>
+                            </li>
+                            <li>20小时前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">700</span>
+                        <span class="my_small"><img src="img/body/pl.png">2</span>
+                        <button class="my_small zan" id="zan1"><img src="img/body/dz.png">4</button>
+                        <script>
+                            let i=4;
+                            //当 单击时执行一个函数
+                            zan1.onclick=function(){
+                                //this->btn
+                                this.innerHTML=`<img src="img/body/dz.png">${++i}`;
+                            }
+                        </script>
+                    </div>
+                </div>
+                <!--第二张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/2.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/avatar.png"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">欢悦猴日常表情</a>
+                            </li>
+                            <li>1天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">569</span>
+                        <span class="my_small"><img src="img/body/pl.png">4</span>
+                        <button class="my_small zan" id="zan2"><img src="img/body/dz.png">9</button>
+                        <script>
+                            let i=9;
+                            //当 单击时执行一个函数
+                            zan2.onclick=function(){
+                                //this->btn
+                                this.innerHTML=`<img src="img/body/dz.png">${++i}`;
+                            }
+                        </script>
+                    </div>
+                </div>
+                <!--第三张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/3.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/101.png"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">部分插画作品</a>
+                            </li>
+                            <li>1天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">958</span>
+                        <span class="my_small"><img src="img/body/pl.png">2</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">8</button>
+                    </div>
+                </div>
+                <!--第四张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/4.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/avatar.png"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">神仙系列黑白无常</a>
+                            </li>
+                            <li>1天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">940</span>
+                        <span class="my_small"><img src="img/body/pl.png">3</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">9</button>
+                    </div>
+                </div>
+                <!--第五张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/5.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/102.jpg"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">【天乩】白夭夭、紫宣Q版</a>
+                            </li>
+                            <li>2天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">946</span>
+                        <span class="my_small"><img src="img/body/pl.png">2</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">12</button>
+                    </div>
+                </div>
+                <!--第六张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/6.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/103.png"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">延禧攻略</a>
+                            </li>
+                            <li>2天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1221</span>
+                        <span class="my_small"><img src="img/body/pl.png">2</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">11</button>
+                    </div>
+                </div>
+                <!--第七张-->
+                <div class="home_pic">
+                    <a href="dream.html">
+                        <img src="img/body/7.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/103.png"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="dream.html" class="text-dark">梦</a>
+                            </li>
+                            <li>2天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1139</span>
+                        <span class="my_small"><img src="img/body/pl.png">1</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">9</button>
+                    </div>
+                </div>
+                <!--第八张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/8.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/104.png"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark a_width" title="【小飞猪王者农药】表情包上架啦~">【小飞猪王者农药】表情包上架啦~</a>
+                            </li>
+                            <li>4天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1019</span>
+                        <span class="my_small"><img src="img/body/pl.png">3</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">13</button>
+                    </div>
+                </div>
+                <!--第九张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/9.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/102.jpg"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">延禧攻略皇富察后</a>
+                            </li>
+                            <li>5天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">2021</span>
+                        <span class="my_small"><img src="img/body/pl.png">10</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">34</button>
+                    </div>
+                </div>
+                <!--第十张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/10.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/132"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">【毛豆6】微信表情包上架啦~</a>
+                            </li>
+                            <li>5天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1154</span>
+                        <span class="my_small"><img src="img/body/pl.png">2</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">6</button>
+                    </div>
+                </div>
+                <!--第十一张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/11.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/106.jpg"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">国民宝宝——淘小枫</a>
+                            </li>
+                            <li>5天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1265</span>
+                        <span class="my_small"><img src="img/body/pl.png">2</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">8</button>
+                    </div>
+                </div>
+                <!--第十二张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/12.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/105.png"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">24节气——处暑</a>
+                            </li>
+                            <li>6天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1043</span>
+                        <span class="my_small"><img src="img/body/pl.png">5</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">12</button>
+                    </div>
+                </div>
+                <!--第十三张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/13.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/107.jpg"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark a_width" title="金蟾十三浪人【壹】——蛊瞳元一">金蟾十三浪人【壹】——蛊瞳元一</a>
+                            </li>
+                            <li>6天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1188</span>
+                        <span class="my_small"><img src="img/body/pl.png">4</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">10</button>
+                    </div>
+                </div>
+                <!--第十四张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/14.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/100(1)"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">花花世界～</a>
+                            </li>
+                            <li>6天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1254</span>
+                        <span class="my_small"><img src="img/body/pl.png">5</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">18</button>
+                    </div>
+                </div>
+                <!--第十五张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/15.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/108.jpg"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark">黄仔与粉仔第二弹</a>
+                            </li>
+                            <li>6天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1423</span>
+                        <span class="my_small"><img src="img/body/pl.png">7</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">15</button>
+                    </div>
+                </div>
+                <!--第十六张-->
+                <div class="home_pic">
+                    <a href="#">
+                        <img src="img/body/16.jpeg">
+                    </a>
+                    <!--小头像及昵称-->
+                    <div class="touxiang d-flex">
+                        <a href="#"><img src="img/body/107.jpg"></a>
+                        <ul class="my_small">
+                            <li>
+                                <a href="#" class="text-dark a_width">金蟾十三浪人【贰】——无双</a>
+                            </li>
+                            <li>6天前发布</li>
+                        </ul>
+                    </div>
+                    <!--查看评论点赞-->
+                    <div class="dianzan">
+                        <span class="my_small"><img src="img/body/ck.png">1143</span>
+                        <span class="my_small"><img src="img/body/pl.png">9</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">12</button>
+                    </div>
+                </div>
+            </div>
+            <!--分页-->
+            <ul class="pagination paging d-flex justify-content-center">
+                <!--<li class="disabled"><a href="#">&laquo;</a></li>-->
+                <li class="active page-item"><a href="#" class="page-link">1</a></li>
+                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li>
+                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+            </ul>
+        </div>
+        <!--经验教程及更多-->
+        <div class="mt-3">
+            <ul class="d-flex justify-content-between mb-4">
+                <li style="font-size:20px;">经验教程</li>
+                <li><a href="#" class="text-primary my_small">更多></a></li>
+            </ul>
+        </div>
+        <div class="d-flex justify-content-between pic row">
+            <!--第十七张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/17.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/109.jpg"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark">肌理插画教程</a>
+                        </li>
+                        <li>7天前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">245</span>
+                    <span class="my_small"><img src="img/body/pl.png">0</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">1</button>
+                </div>
+            </div>
+            <!--第十八张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/18.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/avatar.png"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark">儿童绘本插画基础教程</a>
+                        </li>
+                        <li>2周前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">361</span>
+                    <span class="my_small"><img src="img/body/pl.png">0</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">3</button>
+                </div>
+            </div>
+            <!--第十九张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/19.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/109.jpg"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark">米吸艺术小店手绘教程</a>
+                        </li>
+                        <li>2周前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">325</span>
+                    <span class="my_small"><img src="img/body/pl.png">1</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">1</button>
+                </div>
+            </div>
+            <!--第二十张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/20.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/109.jpg"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark">老奶奶插画教程</a>
+                        </li>
+                        <li>2周前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">169</span>
+                    <span class="my_small"><img src="img/body/pl.png">1</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">6</button>
+                </div>
+            </div>
+            <!--第二十一张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/21.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/110.jpg"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark">照片转插画 手绘教程</a>
+                        </li>
+                        <li>3周前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">194</span>
+                    <span class="my_small"><img src="img/body/pl.png">0</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">7</button>
+                </div>
+            </div>
+            <!--第二十二张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/22.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/110.jpg"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark">“胡子超人”绘画教程</a>
+                        </li>
+                        <li>3周前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">289</span>
+                    <span class="my_small"><img src="img/body/pl.png">0</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">5</button>
+                </div>
+            </div>
+            <!--第二十三张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/23.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/111.jpg"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark a_width" title="《三生三世十里桃花——凤九》手绘教程">《三生三世十里桃花——凤九》手绘教程</a>
+                        </li>
+                        <li>1月前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">620</span>
+                    <span class="my_small"><img src="img/body/pl.png">0</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">6</button>
+                </div>
+            </div>
+            <!--第二十四张-->
+            <div class="home_pic">
+                <a href="#">
+                    <img src="img/body/24.jpeg">
+                </a>
+                <!--小头像及昵称-->
+                <div class="touxiang d-flex">
+                    <a href="#"><img src="img/body/avatar.png"></a>
+                    <ul class="my_small">
+                        <li>
+                            <a href="#" class="text-dark">美丽的脸庞 女孩水彩教程</a>
+                        </li>
+                        <li>2月前发布</li>
+                    </ul>
+                </div>
+                <!--查看评论点赞-->
+                <div class="dianzan">
+                    <span class="my_small"><img src="img/body/ck.png">762</span>
+                    <span class="my_small"><img src="img/body/pl.png">6</span>
+                    <button class="my_small zan"><img src="img/body/dz.png">26</button>
+                </div>
+            </div>
+        </div>
+        <!--推荐汇漫师及更多-->
+        <div class="mt-3">
+            <ul class="d-flex justify-content-between mb-4">
+                <li style="font-size:20px;">推荐汇漫师</li>
+                <li><a href="#" class="text-primary my_small">更多></a></li>
+            </ul>
+        </div>
+        <div class="d-flex justify-content-between pic row">
+            <!--第一张-->
+            <div class="home_pic">
+                <div class="bg_tou">
+                    <img src="img/body/103.png">
+                </div>
+                <div class="bg_border">
+                    <p><a href="#">画画的慕白</a></p>
+                    <p class="my_small">湖南省 / 插画师</p>
+                    <ul class="d-flex justify-content-around bg_border_ul">
+                        <li><a href="#"><img src="img/body/201.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/202.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/203.jpeg" class="bg_border_img"></a></li>
+                    </ul>
+                </div>
+                <!--头像-->
+                <a href="#" class="author"><img src="img/body/103.png" class="author_img"></a>
+            </div>
+            <!--第二张-->
+            <div class="home_pic">
+                <div class="bg_tou">
+                    <img src="img/body/102.jpg">
+                </div>
+                <div class="bg_border">
+                    <p><a href="#">叶紫紫</a></p>
+                    <p class="my_small">四川省 / 插画师</p>
+                    <ul class="d-flex justify-content-around bg_border_ul">
+                        <li><a href="#"><img src="img/body/25.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/5.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/26.jpeg" class="bg_border_img"></a></li>
+                    </ul>
+                </div>
+                <!--头像-->
+                <a href="#" class="author"><img src="img/body/102.jpg" class="author_img"></a>
+            </div>
+            <!--第三张-->
+            <div class="home_pic">
+                <div class="bg_tou">
+                    <img src="img/body/112.jpg">
+                </div>
+                <div class="bg_border">
+                    <p><a href="#">Li大林</a></p>
+                    <p class="my_small">四川省 / 插画师</p>
+                    <ul class="d-flex justify-content-around bg_border_ul">
+                        <li><a href="#"><img src="img/body/204.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/205.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/206.jpeg" class="bg_border_img"></a></li>
+                    </ul>
+                </div>
+                <!--头像-->
+                <a href="#" class="author"><img src="img/body/112.jpg" class="author_img"></a>
+            </div>
+            <!--第四张-->
+            <div class="home_pic">
+                <div class="bg_tou">
+                    <img src="img/body/113.jpg">
+                </div>
+                <div class="bg_border">
+                    <p><a href="#">谷藤2001</a></p>
+                    <p class="my_small">北京市 / 插画师</p>
+                    <ul class="d-flex justify-content-around bg_border_ul">
+                        <li><a href="#"><img src="img/body/207.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/208.jpeg" class="bg_border_img"></a></li>
+                        <li><a href="#"><img src="img/body/209.jpeg" class="bg_border_img"></a></li>
+                    </ul>
+                </div>
+                <!--头像-->
+                <a href="#" class="author"><img src="img/body/113.jpg" class="author_img"></a>
+            </div>
+        </div>
+        <!--友情链接-->
+        <div class="youqinglianjie">
+            <span class="my_small">友情链接:</span>
+            <a href="#">轻之文库</a>
+            <a href="#">动漫星空</a>
+            <a href="#">幻音音乐</a>
+            <a href="#">凤凰网动漫</a>
+            <a href="#">优阁网</a>
+            <a href="#">63手工</a>
+            <a href="#">包大人</a>
+            <a href="#">知萌导航</a>
+            <a href="#">Hpoi手办维基</a>
+            <a href="#">高校联盟</a>
+        </div>
+    </div>
+    <!--底部-->
+    <footer>
+        <!--上半边内容-->
+        <div class="d-flex">
+            <!--底部导航栏-->
+            <div class="footer_bottom">
+                <p>微信公众号</p>
+                <!--公众号图标及导航链接-->
+                <div class="d-flex">
+                    <img src="img/erweima.jpg" alt="微信公众号">
+                    <ul class="footer_nav">
+                        <li>
+                            <a href="#"><img src="img/weibo.png" alt="官方微博" title="官方微博"></a>
+                            <a href="#"><img src="img/qq.png" alt="官方qq" title="联系客服"></a>
+                            <a href="#"><img src="img/weixin.png" alt="官方微信号" title="官方微信号:huiman-net"></a>
+                        </li>
+                        <li>
+                            <a href="#">关于我们 | </a>
+                            <a href="#">版权声明 | </a>
+                            <a href="#">建议反馈 | </a>
+                            <a href="#">隐私保护 | </a>
+                            <a href="#">联系我们  </a>
+                        </li>
+                        <li><p>汇漫网QQ交流群：328875574</p></li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                平台简介 <br>
+                汇漫网（huiman.net），专业原创动漫设计互动平台。汇聚了中国大量专业动画师、漫画师、插画师，艺术学院师生等优秀人群，站内涉及作品发布、素材分享、文章学习、汇漫师专访、动漫赛事等诸多领域。我们希望打造中国最专业的动漫互动平台，致力于中国动漫的发展。为中国动漫而崛起。
+            </p>
+        </div>
+        <!--下半边内容-->
+        <div class="d-flex justify-content-between">
+            <p>Copyright © 2016-2018 www.huiman.net 汇漫网 版权所有 闽ICP备15018971号-7</p>
+            <p>为中国动漫崛起而努力</p>
+        </div>
+    </footer>
+</body>
+</html>

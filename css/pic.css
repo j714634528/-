@@ -1,0 +1,87 @@
+/*图片*/
+.home_pic{
+    width:280px;
+    height:330px;
+    border:1px solid #e0e0e0;
+    border-radius: 10px;
+    margin:0 0 30px;
+    background: #fff;
+    padding:0;
+    position: relative;
+
+}
+.home_pic:hover{
+    transform: scale(1.05);
+    transition: all .3s;
+    box-shadow: 5px 5px 10px #aaa;
+}
+.home_pic a{
+    display: block;
+    margin: 0;
+}
+.home_pic>a>img{
+    width:278px;
+    height:210px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.touxiang{
+    width:280px;
+    height:71px;
+    padding:15px;
+    border-bottom: 1px solid #cccccc;
+}
+/*图片框小头像*/
+.touxiang img{
+    width:36px;
+    height:36px;
+    border-radius: 50%;
+    float: left;
+}
+.pic{
+    width:1180px;
+    margin:0 auto;
+}
+/*小头像旁边文字内容*/
+.touxiang>ul li{
+    width:200px;
+    height:25px;
+    color:#cccccc;
+    margin-left: 10px;
+    text-overflow:ellipsis;
+
+}
+.touxiang ul li>a{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+/*a标签的宽度*/
+.a_width{
+    width: 200px;
+}
+/*图片框中查看\评论\点赞*/
+.dianzan{
+    height:22px;
+    padding:10px 16px 14px 13px;
+}
+.dianzan>span{
+    margin-right: 3px;
+    color:#8f98aa;
+}
+.dianzan>button{
+    color:#8f98aa;
+}
+.dianzan span>img{
+    margin:0 2px 3px 0;
+}
+/*点赞按钮*/
+.zan{
+    border:0;
+    background: transparent;
+    outline: none !important;
+}
+.zan img{
+    margin-bottom: 6px;
+}

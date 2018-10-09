@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>模板</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--顶部导航栏-->
+    <header class="w-100 d-flex justify-content-between">
+    <!--左半边内容-->
+    <div id="head_l" class="d-flex justify-content-around w-50">
+        <!--logo图标-->
+        <div class="ml-5">
+            <a href="body.html"><img src="img/logo.png" alt="汇漫logo"></a>
+        </div>
+        <!--导航栏内容-->
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="body.html" class="nav-link active text-dark" data-target="tab">首页</a></li>
+            <li class="nav-item menu_b1"><a href="discover.html" class="nav-link" data-target="tab">发现</a>
+                <ul class="menu_b-1">
+                    <li><a href="#">插画作品</a></li>
+                    <li><a href="#">漫画作品</a></li>
+                    <li><a href="#">动画作品</a></li>
+                </ul>
+            </li>
+            <li class="nav-item menu_b1"><a href="xuexi.html" class="nav-link" data-target="tab">学习</a>
+                <ul class="menu_b-1">
+                    <li><a href="xuexi.html">文章</a></li>
+                    <li><a href="#">专访</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="linggan.html" class="nav-link" data-target="tab">灵感</a></li>
+            <li class="nav-item"><a href="huimanshi.html" class="nav-link" data-target="tab">汇漫师</a></li>
+            <li class="nav-item menu_b1"><a href="#" class="nav-link" data-target="tab">活动</a>
+                <ul class="menu_b-1">
+                    <li><a href="#">线上活动</a></li>
+                    <li><a href="#">专题策划</a></li>
+                    <li><a href="#">设计大赛</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--右半边内容-->
+    <div id="head_r" class="w-50 d-flex">
+        <!--搜索框-->
+        <div class="clearfix headsearch bg-white d-flex">
+            <!--搜索框的左半边-->
+            <div class="my_hsmall">
+                <div class="menu_b2">
+                    作品
+                    <img src="img/header_normal.png" class="mb-1">
+                    <!--先隐藏下拉菜单,学完jq再写-->
+                    <ul class="menu_b-2">
+                        <li><a href="#">作品</a></li>
+                        <li><a href="xuexi.html">文章</a></li>
+                        <li><a href="#">素材</a></li>
+                        <li><a href="#">汇漫师</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--搜索框右半边-->
+            <input type="search" class="my_search form-control-plaintext" href="img/" placeholder="搜索">
+            <a href="#" class="search_img"><img src="img/search.png" alt="搜索"></a>
+        </div>
+        <a href="login.html"><img src="img/dl.png" alt="登录">登录</a>
+        <a href="register.html" class="head_r_registe"><img src="img/zc.png" alt="注册">注册</a>
+    </div>
+</header>
+</body>
+</html>

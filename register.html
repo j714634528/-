@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>模板</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="bodyer">
+        <div class="directive_notif" v-show="has" v-cloak>
+            <span class="notif">请填写正确的手机号码</span>
+        </div>
+        <!--登录框-->
+        <div id="login">
+            <div class="login_body">
+                <a href="body.html"><img src="img/login/huim-logo.png" title="汇漫"></a>
+                <input type="tel" placeholder="手机号码" v-model="phone" name="phone">
+                <span :style="unamestyle">*</span>
+                <!--验证-->
+                <div id="verification">
+                    <button type="button">
+                        <img src="img/login/yz.png">点击此处进行验证
+                    </button>
+                </div>
+                <div>
+                    <div id="ver">
+                        <input type="tel" placeholder="手机验证码">
+                        <span v-cloak>
+                            <input type="submit" value="发送验证码" v-show="show" @click="getCode">
+                            <span v-show="!show" class="count" >{{count}} s后重新获取</span>
+                        </span>
+                        
+                    </div>
+                </div>
+                
+                <input type="password" placeholder="请输入6~15位密码" v-model="upwd">
+                <span :style="unamestyle">*</span>
+                <input type="password" placeholder="确认密码" v-model="upwdtwo">
+                <span :style="unamestyle">*</span>
+                <div id="ty">
+                    <input type="checkbox" v-model="isAgree">
+                    <span>我已阅读并接受 <a href="#">《版权声明》</a> 和 <a href="#">《隐私保护》</a></span>
+                </div>
+                <input type="submit" class="btn btn-primary" :disabled="!isAgree" value="注册" @click="isAcode">
+                <p class="d-flex justify-content-between p1">
+                    <span>已有账号？<a href="login.html">请登录</a></span>
+                    <span><a href="#">忘记密码?</a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var vm=new Vue({
+            el:"#bodyer",
+            data:{
+                isAgree: false,
+                unamestyle: {color:"red"},
+                show: true,
+                count: '',
+                timer: null,
+                phone: "",
+                has: false,
+                upwd: "",
+            },
+            methods:{
+                getCode(){
+                    var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+                    const TIME_COUNT = 60;
+                    var t=null;
+                    t=this;
+                    if(t.phone==""){
+                        // return this.disabled=true
+                        console.log(2)
+                        t.has=true
+                        t.timer=setInterval(function(){
+                            t.has=false;
+                            },4000)
+                    }else if(!myreg.test(t.phone)){
+                        console.log(3)
+                        t.has=true
+                        t.timer=setInterval(function(){
+                            t.has=false;
+                            },4000)
+                    }else{
+                //         if (!t.timer) {
+                         console.log(4)
+                            t.count = TIME_COUNT;
+                            t.show = false;
+                            t.timer = setInterval(function(){
+                                if (t.count > 0 && t.count <= TIME_COUNT) {
+                                    t.count--;
+                                } else {
+                                    t.show = true;
+                                    clearInterval(t.timer);
+                                    t.timer = null;
+                                }
+                            }, 1000)
+                //         }
+                    }
+                },
+                isAcode(){
+                    var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+                    var upwd=/^[0-9A-Za-z]{6,15}$/;
+                    var t=null;
+                    t=this;
+                    if(t.phone==""){
+                        // return this.disabled=true
+                        console.log(2)
+                        t.has=true
+                        t.timer=setInterval(function(){
+                            t.has=false;
+                            },4000)
+                    }else if(!myreg.test(t.phone)){
+                        console.log(3)
+                        t.has=true
+                        t.timer=setInterval(function(){
+                            t.has=false;
+                            },4000)
+                    }
+                    if(t.upwd=="")
+                }
+            },
+            computed:{
+                upwd: function() {
+                    var errorText;
+                    if(!/^[0-9A-Za-z]{6,15}$/.test(this.upwd)) {
+                        errorText = '密码少于6位'
+                    } else {
+                        errorText = ''
+                    }
+                    if(!this.passwordFlag) {
+                        errorText = ''
+                        this.passwordFlag = true
+                    }
+                    return {
+                        errorText
+                    }
+                },
+                upwdtwo: function() {
+                    var errorText;
+                    if(!/^[0-9A-Za-z]{6,15}$/.test(this.upwdtwo)) {
+                        errorText = '密码少于6位'
+                    }else if(this.passwordcheckModel !==this.passwordModel ){
+                        errorText = '两次密码不匹配'
+                    }
+                    else {
+                        errorText = ''
+                    }
+                    
+                    if(!this.passwordFlag) {
+                        errorText = ''
+                        this.passwordFlag = true
+                    }
+                    return {
+                        errorText
+                    }
+                }
+                
+            },
+                        
+            created(){
+                
+            }
+        })
+    </script>
+</body>
+</html>

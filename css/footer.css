@@ -1,0 +1,46 @@
+/*底部模块*/
+footer{
+    background: #011935;
+    padding:50px 70px;
+}
+.footer_bottom{
+    width:65%;
+}
+/*底部导航栏*/
+.footer_nav{
+    list-style: none;
+    margin-left: 30px;
+}
+/*微信公众号*/
+footer p{
+    color:white;
+}
+/*微博,QQ,微信*/
+.footer_nav li a{
+    margin-right: 5px;
+    color:white;
+    font-size: 12px;
+}
+.footer_nav li{
+    margin-bottom: 5px;
+}
+/*公众号图片*/
+.footer_bottom div:last-child>img{
+    width:85px;
+    height:85px;
+}
+/*底部右半边内容简介*/
+footer>div:first-child p:nth-child(2){
+    color:white;
+    width:35%;
+    font-size: 14px;
+}
+/*上半边div*/
+footer>div:first-child{
+    border-bottom: 1px solid #e0e0e0;
+}
+/*下半边版权内容*/
+footer>div:last-child p{
+    font-size: 14px;
+    margin-top: 10px;
+}

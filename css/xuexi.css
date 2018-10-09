@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-weight: normal;
+}
+body{
+    background: #F0F2F5;
+}
+a{
+    text-decoration: none;
+}
+.my_small{
+    font-size: 14px;
+}
+.w-1180{
+    width:1180px;
+    margin: 30px auto;
+}
+/*左边文章内容*/
+.left-div{
+    width:826px;
+    padding:0 20px 30px;
+    background: #fff;
+    border-radius: 5px;
+}
+/*左边大div中的内容div*/
+.con-left{
+    padding: 30px 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+/*文章图片*/
+.con-left>a:first-child>img:first-child{
+    width:280px;
+    height:210px;
+    margin-right: 20px;
+}
+/*图片右边文字内容*/
+.con-left_right>h4>a{
+    color:#38485a;
+}
+.con-left_right>p{
+    margin-bottom: 8px;
+    color:#999;
+}
+.con-left_right>p>a{
+    color: #19A0BC;
+}
+.con-left_right>div{
+    color:#999;
+}
+/*头像*/
+.dianzan>a>img{
+    width:33px;
+    height:33px;
+    border-radius: 50%;
+}
+.dianzan>a{
+    color:#999;
+    display: inline-block;
+    margin-right: 20px;
+}
+/*分页*/
+#fenye{
+    position: relative;
+    top: 50px;
+    right:148px;
+}
+
+/*右边文章内容*/
+.right-div{
+    margin-left: 30px;
+    width:324px;
+}
+.con-right{
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.con-right>h6{
+    padding: 10px 15px 15px;
+    margin: 0;
+    color:#666;
+}
+.con-right_body{
+    padding: 10px;
+    border-top: 1px solid #e8e8e8;
+}
+/*图片链接*/
+.con-right_body>a{
+    display: block;
+    height:82.5px;
+}
+/*图片*/
+.con-right_body>a>img{
+    width:110px;
+    height:82.5px;
+    border-radius: 5px;
+}
+/*标题文字*/
+.w1{
+    margin-left: 10px;
+}
+.w1>a{
+    color:#5a6268;
+    font-size: 14px;
+}
+.w1>p{
+    color:#999;
+    font-size: 13px;
+    margin: 15px 0 0;
+}
+.w1>p>span{
+    margin-left: 10px;
+}
+
+/*热门作者*/
+.con-right_body2{
+    padding: 10px;
+    border-top: 1px solid #e8e8e8;
+}
+.con-right_body2>a>img{
+    width:76px;
+    height:76px;
+    border-radius: 50%;
+}
+.w2{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.w2>a{
+    font-size: 18px;
+    color:#007bff;
+}
+.w2>p{
+    font-size: 12px;
+    margin-top: 5px;
+}

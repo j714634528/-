@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>模板</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/header-two.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/xuexi.css">
+    <link rel="stylesheet" href="css/pic.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--顶部导航栏-->
+    <header id="header" class="w-100 d-flex justify-content-between">
+        <!--左半边内容-->
+        <div id="head_l" class="d-flex justify-content-around w-50">
+            <!--logo图标-->
+            <div class="ml-5">
+                <a href="body.html"><img src="img/logo.png" alt="汇漫logo"></a>
+            </div>
+            <!--导航栏内容-->
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="body.html" class="nav-link" data-target="tab">首页</a></li>
+                <li class="nav-item menu_b1"><a href="discover.html" class="nav-link" data-target="tab">发现</a>
+                    <ul class="menu_b-1">
+                        <li><a href="#">插画作品</a></li>
+                        <li><a href="#">漫画作品</a></li>
+                        <li><a href="#">动画作品</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item menu_b1"><a href="xuexi.html" class="nav-link active text-dark" data-target="tab">学习</a>
+                    <ul class="menu_b-1">
+                        <li><a href="xuexi.html">文章</a></li>
+                        <li><a href="#">专访</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="linggan.html" class="nav-link" data-target="tab">灵感</a></li>
+                <li class="nav-item"><a href="huimanshi.html" class="nav-link" data-target="tab">汇漫师</a></li>
+                <li class="nav-item menu_b1"><a href="#" class="nav-link" data-target="tab">活动</a>
+                    <ul class="menu_b-1">
+                        <li><a href="#">线上活动</a></li>
+                        <li><a href="#">专题策划</a></li>
+                        <li><a href="#">设计大赛</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--右半边内容-->
+        <div id="head_r" class="w-50 d-flex">
+            <!--搜索框-->
+            <div class="clearfix headsearch bg-white d-flex">
+                <!--搜索框的左半边-->
+                <div class="my_hsmall">
+                    <div class="menu_b2">
+                        作品
+                        <img src="img/header_normal.png" class="mb-1">
+                        <!--先隐藏下拉菜单,学完jq再写-->
+                        <ul class="menu_b-2">
+                            <li><a href="#">作品</a></li>
+                            <li><a href="xuexi.html">文章</a></li>
+                            <li><a href="#">素材</a></li>
+                            <li><a href="#">汇漫师</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--搜索框右半边-->
+                <input type="search" class="my_search form-control-plaintext" href="img/" placeholder="搜索">
+                <a href="#" class="search_img"><img src="img/search.png" alt="搜索"></a>
+            </div>
+            <a href="login.html"><img src="img/dl.png" alt="登录">登录</a>
+            <a href="register.html" class="head_r_registe"><img src="img/zc.png" alt="注册">注册</a>
+        </div>
+    </header>
+    <!--下方分类栏目-->
+    <div class="head_b">
+        <div class="d-flex justify-content-between">
+            <ul class="d-flex fenlei">
+                <li class="t_m">
+                    <a href="#">全部分类</a>
+                    <ul class="two-menu">
+                        <li class="t_m">
+                            <a href="#">教程</a>
+                            <ul class="two-menu-2">
+                                <li><a href="#">插画</a></li>
+                                <li><a href="#">漫画</a></li>
+                                <li><a href="#">动画</a></li>
+                            </ul>
+                        </li>
+                        <li class="t_m">
+                            <a href="#">经验/观点</a>
+                            <ul class="two-menu-2">
+                                <li><a href="#">插画</a></li>
+                                <li><a href="#">漫画</a></li>
+                                <li><a href="#">动画</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">全部分类</a></li>
+                    </ul>
+                </li>
+                <li class="t_m">
+                    <a href="#">全部来源</a>
+                    <ul class="two-menu">
+                        <li><a href="#">原创</a></li>
+                        <li><a href="#">转载</a></li>
+                        <li><a href="#">全部来源</a></li>
+                    </ul>
+                </li>
+                <li class="t_m">
+                    <a href="#">最新上传</a>
+                    <ul class="two-menu">
+                        <li><a href="#">最新上传</a></li>
+                        <li><a href="#">浏览最多</a></li>
+                        <li><a href="#">评论最多</a></li>
+                        <li><a href="#">点赞最多</a></li>
+                        <li><a href="#">收藏最多</a></li>
+                    </ul>
+                </li>
+                <li class="t_m">
+                    <a href="#">不限时间</a>
+                    <ul class="two-menu">
+                        <li><a href="#">不限时间</a></li>
+                        <li><a href="#">3天内</a></li>
+                        <li><a href="#">一周内</a></li>
+                        <li><a href="#">一月内</a></li>
+                        <li><a href="#">一年内</a></li>
+                    </ul>
+                </li>
+                <li class="t_m">
+                    <a href="#">全部属性</a>
+                    <ul class="two-menu">
+                        <li><a href="#">有源文件</a></li>
+                        <li><a href="#">全部属性</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#" class="shangchuan">上传文章</a>
+        </div>
+    </div>
+    <!--主体内容-->
+    <div class="w-1180 d-flex">
+        <!--左边内容-->
+        <div class="left-div">
+            <!--第一块div-->
+            <div class="con-left d-flex justify-content-between">
+                <a href="#"><img src="img/xuexi/1.jpeg"></a>
+                <div class="con-left_right">
+                    <h4><a href="#">《重生特工之王者在上》：带你领略男人之间的权谋斗争</a></h4>
+                    <p class="my_small"><a href="#">经验/观点</a>漫画</p>
+                    <div class="my_small">今年夏天，斗争戏成为暑期爆款，从《甄嬛传》到《延禧攻略》，播出时期都成功抢占各大网站的头条话题，《甄嬛传》总播放量已经达到了36亿次，而《延禧攻略》上线5天的播放量就已破4亿，豆瓣评分竟然达到了7.1分，想想豆友的严苛程...</div>
+                    <!--头像及点赞模块-->
+                    <div class="dianzan">
+                        <a href="#" class="my_small"><img src="img/xuexi/100.jpg">&nbsp;&nbsp;动漫同好会</a>
+                        <span class="my_small"><img src="img/body/ck.png">110</span>
+                        <span class="my_small"><img src="img/body/pl.png">0</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">0</button>
+                    </div>
+                </div>
+            </div>
+            <!--第一块div-->
+            <div class="con-left d-flex justify-content-between">
+                <a href="#"><img src="img/xuexi/1.jpeg"></a>
+                <div class="con-left_right">
+                    <h4><a href="#">《重生特工之王者在上》：带你领略男人之间的权谋斗争</a></h4>
+                    <p class="my_small"><a href="#">经验/观点</a>漫画</p>
+                    <div class="my_small">今年夏天，斗争戏成为暑期爆款，从《甄嬛传》到《延禧攻略》，播出时期都成功抢占各大网站的头条话题，《甄嬛传》总播放量已经达到了36亿次，而《延禧攻略》上线5天的播放量就已破4亿，豆瓣评分竟然达到了7.1分，想想豆友的严苛程...</div>
+                    <!--头像及点赞模块-->
+                    <div class="dianzan">
+                        <a href="#" class="my_small"><img src="img/xuexi/100.jpg">&nbsp;&nbsp;动漫同好会</a>
+                        <span class="my_small"><img src="img/body/ck.png">110</span>
+                        <span class="my_small"><img src="img/body/pl.png">0</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">0</button>
+                    </div>
+                </div>
+            </div>
+            <!--第一块div-->
+            <div class="con-left d-flex justify-content-between">
+                <a href="#"><img src="img/xuexi/1.jpeg"></a>
+                <div class="con-left_right">
+                    <h4><a href="#">《重生特工之王者在上》：带你领略男人之间的权谋斗争</a></h4>
+                    <p class="my_small"><a href="#">经验/观点</a>漫画</p>
+                    <div class="my_small">今年夏天，斗争戏成为暑期爆款，从《甄嬛传》到《延禧攻略》，播出时期都成功抢占各大网站的头条话题，《甄嬛传》总播放量已经达到了36亿次，而《延禧攻略》上线5天的播放量就已破4亿，豆瓣评分竟然达到了7.1分，想想豆友的严苛程...</div>
+                    <!--头像及点赞模块-->
+                    <div class="dianzan">
+                        <a href="#" class="my_small"><img src="img/xuexi/100.jpg">&nbsp;&nbsp;动漫同好会</a>
+                        <span class="my_small"><img src="img/body/ck.png">110</span>
+                        <span class="my_small"><img src="img/body/pl.png">0</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">0</button>
+                    </div>
+                </div>
+            </div>
+            <!--第一块div-->
+            <div class="con-left d-flex justify-content-between">
+                <a href="#"><img src="img/xuexi/1.jpeg"></a>
+                <div class="con-left_right">
+                    <h4><a href="#">《重生特工之王者在上》：带你领略男人之间的权谋斗争</a></h4>
+                    <p class="my_small"><a href="#">经验/观点</a>漫画</p>
+                    <div class="my_small">今年夏天，斗争戏成为暑期爆款，从《甄嬛传》到《延禧攻略》，播出时期都成功抢占各大网站的头条话题，《甄嬛传》总播放量已经达到了36亿次，而《延禧攻略》上线5天的播放量就已破4亿，豆瓣评分竟然达到了7.1分，想想豆友的严苛程...</div>
+                    <!--头像及点赞模块-->
+                    <div class="dianzan">
+                        <a href="#" class="my_small"><img src="img/xuexi/100.jpg">&nbsp;&nbsp;动漫同好会</a>
+                        <span class="my_small"><img src="img/body/ck.png">110</span>
+                        <span class="my_small"><img src="img/body/pl.png">0</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">0</button>
+                    </div>
+                </div>
+            </div>
+            <!--第一块div-->
+            <div class="con-left d-flex justify-content-between">
+                <a href="#"><img src="img/xuexi/1.jpeg"></a>
+                <div class="con-left_right">
+                    <h4><a href="#">《重生特工之王者在上》：带你领略男人之间的权谋斗争</a></h4>
+                    <p class="my_small"><a href="#">经验/观点</a>漫画</p>
+                    <div class="my_small">今年夏天，斗争戏成为暑期爆款，从《甄嬛传》到《延禧攻略》，播出时期都成功抢占各大网站的头条话题，《甄嬛传》总播放量已经达到了36亿次，而《延禧攻略》上线5天的播放量就已破4亿，豆瓣评分竟然达到了7.1分，想想豆友的严苛程...</div>
+                    <!--头像及点赞模块-->
+                    <div class="dianzan">
+                        <a href="#" class="my_small"><img src="img/xuexi/100.jpg">&nbsp;&nbsp;动漫同好会</a>
+                        <span class="my_small"><img src="img/body/ck.png">110</span>
+                        <span class="my_small"><img src="img/body/pl.png">0</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">0</button>
+                    </div>
+                </div>
+            </div>
+            <!--第一块div-->
+            <div class="con-left d-flex justify-content-between">
+                <a href="#"><img src="img/xuexi/1.jpeg"></a>
+                <div class="con-left_right">
+                    <h4><a href="#">《重生特工之王者在上》：带你领略男人之间的权谋斗争</a></h4>
+                    <p class="my_small"><a href="#">经验/观点</a>漫画</p>
+                    <div class="my_small">今年夏天，斗争戏成为暑期爆款，从《甄嬛传》到《延禧攻略》，播出时期都成功抢占各大网站的头条话题，《甄嬛传》总播放量已经达到了36亿次，而《延禧攻略》上线5天的播放量就已破4亿，豆瓣评分竟然达到了7.1分，想想豆友的严苛程...</div>
+                    <!--头像及点赞模块-->
+                    <div class="dianzan">
+                        <a href="#" class="my_small"><img src="img/xuexi/100.jpg">&nbsp;&nbsp;动漫同好会</a>
+                        <span class="my_small"><img src="img/body/ck.png">110</span>
+                        <span class="my_small"><img src="img/body/pl.png">0</span>
+                        <button class="my_small zan"><img src="img/body/dz.png">0</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右边内容-->
+        <div class="right-div">
+            <!--热门文章-->
+            <div class="con-right">
+                <h6>热门文章</h6>
+                <!--右边第一篇文章-->
+                <div class="con-right_body d-flex">
+                    <a href="#"><img src="img/xuexi/3.jpeg"></a>
+                    <div class="w1">
+                        <a href="#">《山茶花》水彩详细步骤教程 手绘教程</a>
+                        <p>7月前上传 <span>浏览: 2061</span></p>
+                    </div>
+                </div>
+                <!--右边第二篇文章-->
+                <div class="con-right_body d-flex">
+                    <a href="#"><img src="img/xuexi/4.jpeg"></a>
+                    <div class="w1">
+                        <a href="#">《微人类》漫画系列插画 插画用光微教程</a>
+                        <p>4月前上传 <span>浏览: 1793</span></p>
+                    </div>
+                </div>
+                <!--右边第三篇文章-->
+                <div class="con-right_body d-flex">
+                    <a href="#"><img src="img/xuexi/3.jpeg"></a>
+                    <div class="w1">
+                        <a href="#">《山茶花》水彩详细步骤教程 手绘教程</a>
+                        <p>7月前上传 <span>浏览: 2061</span></p>
+                    </div>
+                </div>
+                <!--右边第四篇文章-->
+                <div class="con-right_body d-flex">
+                    <a href="#"><img src="img/xuexi/4.jpeg"></a>
+                    <div class="w1">
+                        <a href="#">《微人类》漫画系列插画 插画用光微教程</a>
+                        <p>4月前上传 <span>浏览: 1793</span></p>
+                    </div>
+                </div>
+                <!--右边第五篇文章-->
+                <div class="con-right_body d-flex">
+                    <a href="#"><img src="img/xuexi/4.jpeg"></a>
+                    <div class="w1">
+                        <a href="#">《微人类》漫画系列插画 插画用光微教程</a>
+                        <p>4月前上传 <span>浏览: 1793</span></p>
+                    </div>
+                </div>
+            </div>
+            <!--热门作者-->
+            <div class="con-right">
+                <h6>热门作者</h6>
+                <div class="con-right_body2 d-flex">
+                    <a href="#"><img src="img/xuexi/101.jpg"></a>
+                    <div class="w2">
+                        <a href="#">漫疯子</a>
+                        <p>17粉丝 / 161关注</p>
+                    </div>
+                </div>
+                <div class="con-right_body2 d-flex">
+                    <a href="#"><img src="img/xuexi/101.jpg"></a>
+                    <div class="w2">
+                        <a href="#">漫疯子</a>
+                        <p>17粉丝 / 161关注</p>
+                    </div>
+                </div>
+                <div class="con-right_body2 d-flex">
+                    <a href="#"><img src="img/xuexi/101.jpg"></a>
+                    <div class="w2">
+                        <a href="#">漫疯子</a>
+                        <p>17粉丝 / 161关注</p>
+                    </div>
+                </div>
+                <div class="con-right_body2 d-flex">
+                    <a href="#"><img src="img/xuexi/101.jpg"></a>
+                    <div class="w2">
+                        <a href="#">漫疯子</a>
+                        <p>17粉丝 / 161关注</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--分页-->
+    <ul class="pagination paging d-flex justify-content-center" id="fenye">
+        <!--<li class="disabled"><a href="#">&laquo;</a></li>-->
+        <li class="active page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+    </ul>
+    <!--底部-->
+    <footer>
+        <!--上半边内容-->
+        <div class="d-flex">
+            <!--底部导航栏-->
+            <div class="footer_bottom">
+                <p>微信公众号</p>
+                <!--公众号图标及导航链接-->
+                <div class="d-flex">
+                    <img src="img/erweima.jpg" alt="微信公众号">
+                    <ul class="footer_nav">
+                        <li>
+                            <a href="#"><img src="img/weibo.png" alt="官方微博" title="官方微博"></a>
+                            <a href="#"><img src="img/qq.png" alt="官方qq" title="联系客服"></a>
+                            <a href="#"><img src="img/weixin.png" alt="官方微信号" title="官方微信号:huiman-net"></a>
+                        </li>
+                        <li>
+                            <a href="#">关于我们 | </a>
+                            <a href="#">版权声明 | </a>
+                            <a href="#">建议反馈 | </a>
+                            <a href="#">隐私保护 | </a>
+                            <a href="#">联系我们  </a>
+                        </li>
+                        <li><p>汇漫网QQ交流群：328875574</p></li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                平台简介 <br>
+                汇漫网（huiman.net），专业原创动漫设计互动平台。汇聚了中国大量专业动画师、漫画师、插画师，艺术学院师生等优秀人群，站内涉及作品发布、素材分享、文章学习、汇漫师专访、动漫赛事等诸多领域。我们希望打造中国最专业的动漫互动平台，致力于中国动漫的发展。为中国动漫而崛起。
+            </p>
+        </div>
+        <!--下半边内容-->
+        <div class="d-flex justify-content-between">
+            <p>Copyright © 2016-2018 www.huiman.net 汇漫网 版权所有 闽ICP备15018971号-7</p>
+            <p>为中国动漫崛起而努力</p>
+        </div>
+    </footer>
+</body>
+</html>
